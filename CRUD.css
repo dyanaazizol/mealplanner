@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("meal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space between;
+    align-items: center;
+    background-color: #0074d9;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.24);
+}
+
+.left-content {
+    margin-left: 10px;
+}
+
+.center-content {
+    flex-grow: 1;
+}
+
+/* Navigation bar styles */
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* Navigation bar link underline styles */
+.navbar a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Main content area */
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* Form styles */
+form {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+buttons-container {
+    margin-top: 20px;
+}
+
+/* Button styles */
+button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table tr {
+    margin-bottom: 10px;
+}
+
+table th {
+    background-color: rgb(11, 90, 114);
+    color: #fff;
+}
+
+/* Specific styles for a table with id "fileTableBody" */
+#fileTableBody {
+    background-color: #f0f0f0;
+}
+
+/* Specific styles for an element with id "fileContents" */
+#fileContents {
+    min-height: 100px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meal Planner</title> <!-- Set the title of the web page -->
+    <link rel="stylesheet" type="text/css" href="CRUD.css"> 
+</head>
+
+<body>
+    <div class="header">
+        <div class="left-content">
+            <img src="logo1.png" width="90px"> <!-- Logo and header section -->
+        </div>
+        <div class="center-content">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li> <!-- Navigation links to Home, View Recipe, and Meal Planner -->
+                    <li><a href="viewrecipe.html">View Recipe</a></li>
+                    <li><a href="CRUD.html">Meal Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <h1> View and Update your meal planner here:</h1> 
+
+        <form>
+            <div class="container"> <!-- Form section for file management -->
+                <div class="form-group">
+                    <label>File name</label>
+                    <input id="fileName" type="text" class="form-control" value="mealplanner.txt" disabled> <!-- File name input field -->
+                </div>
+
+                <br><br>
+
+                <div class="form-group">
+                    <label for="fileContents">Content:</label>
+                    <br>
+                    <textarea id="fileContents" class="form-control" rows="5"></textarea> <!-- Text area for file content -->
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <button id="btnRead" class="btn btn-default">Read</button> <!-- Read button -->
+        <button id="btnUpdate" class="btn btn-default">Update</button> <!-- Update button -->
+
+        <table id="fileTable">
+            <thead>
+                <tr>
+                    <th>Meal Plan</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="fileTableBody"></tbody> <!-- Table for displaying meal plans -->
+        </table>
+    </main>
+
+    <script src="CRUD.js"></script> 
+</body>
+
+</html>

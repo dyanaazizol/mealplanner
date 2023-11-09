@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plan Meal</title> <!-- Set the title of the web page -->
+    <link rel="stylesheet" type="text/css" href="CRUD.css"> 
+</head>
+
+<body>
+    <div class="header">
+        <div class="left-content">
+            <img src="logo1.png" width="90px"> <!-- Logo and header section -->
+        </div>
+        <div class="center-content">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li> <!-- Navigation links to Home, View Recipe, and Meal Planner -->
+                    <li><a href="viewrecipe.html">View Recipe</a></li>
+                    <li><a href="CRUD.html">Meal Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <h1> Plan your meal here:</h1> 
+
+        <form>
+            <div class="container">
+                <div class="form-group">
+                    <label>File name</label> <!-- Label for the file name input -->
+                    <input id="fileName" type="text" class="form-control" value="mealplanner.txt" disabled> <!-- Input field for the file name (disabled) -->
+                </div>
+
+                <br><br>
+
+                <div class="form-group">
+                    <label for="fileContents">Content:</label> <!-- Label for the content input area -->
+                    <br>
+                    <textarea id="fileContents" class="form-control" rows="5"></textarea> <!-- Textarea for entering file content -->
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <button id="btnCreate" class="btn btn-default">Create</button> <!-- Button for creating a new text file -->
+
+    </main>
+
+    <script src="plan.js"></script> 
+</body>
+
+</html>

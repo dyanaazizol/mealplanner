@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>View Recipe</title>
+    <link rel="stylesheet" href="viewrecipe.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-content">
+        <img src="logo1.png" width="90px" > <!-- Logo image in the header -->
+      </div>
+      <div class="center-content">
+        <nav>
+          <ul class="navbar"> <!-- Navigation bar links -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewrecipe.html">View Recipe</a></li>
+            <li><a href="CRUD.html">Meal Planner</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <h1> Search your recipe here</h1> <!-- Page title -->
+    <center>
+      <label for="searchData">Select a meal category:</label> <!-- Dropdown label -->
+      <br>
+      <select id="searchData"> <!-- Dropdown select for meal category -->
+      </select>
+    </center>
+    <br>
+    <button onclick="buttonClicked()">Suggest Recipe</button> <!-- Button to suggest a recipe -->
+    <button id="planMealButton" onclick="navigateToCRUDPage()" style="display: none;">Plan meal</button> <!-- Button to plan a meal-->
+    <div id="suggestRecipe"></div> <!-- Display suggested recipes-->
+    <div id="planMealContainer"></div> <!-- Container for plan meals -->
+
+    <!-- the modal HTML structure for displaying meal details -->
+    <div id="mealModal" class="modal">
+      <div class="modal-content">
+        <span id="mealModalClose" class="close">&times;</span>
+        <div id="mealModalContent"></div>
+      </div>
+    </div>
+  </body>
+  <script src="fetchapi.js"></script>
+</html>
